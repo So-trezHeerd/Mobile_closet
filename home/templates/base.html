@@ -1,0 +1,17 @@
+{% block content %}
+<h1>home 파일</h1>
+<div class = 'web-header-container' style = "width:100%">
+    <div class = "web-header" style="height: 45px;" >
+        <a href="">홈</a>
+        {% if user.is_authenticated %}
+            <a href="accounts/logout">로그아웃</a>
+            <a href="closet/">옷장</a>
+        {% else%}
+            <a href="accounts/signup">회원가입</a>
+            <a href="accounts/login">로그인</a>
+        {% endif %}
+    
+</div>
+</div>
+
+{% endblock %}
