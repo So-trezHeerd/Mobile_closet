@@ -27,7 +27,7 @@ def img_upload(request):
     
 def predict(request):
     #pass
-    if(request.method == 'POST'):
+    if request.POST.get('action') == 'post':
 
         img =  request.FILES['imgfile']
 
